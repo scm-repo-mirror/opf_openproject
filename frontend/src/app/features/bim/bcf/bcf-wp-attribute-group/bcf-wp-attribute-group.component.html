@@ -20,6 +20,9 @@
       <a
         [title]="text.add_viewpoint"
         class="button"
+        tabindex="0"
+        (keydown.enter)="saveViewpoint(workPackage)"
+        (keydown.space)="saveViewpoint(workPackage)"
         (click)="saveViewpoint(workPackage)">
         <op-icon icon-classes="button--icon icon-add" />
         <span class="button--text"> {{text.viewpoint}} </span>

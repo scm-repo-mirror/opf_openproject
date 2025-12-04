@@ -1,7 +1,10 @@
 @if (!editing) {
   <div
     (click)="startEditing()"
+    (keydown.enter)="startEditing()"
+    (keydown.space)="startEditing()"
     [textContent]="name"
+    tabindex="0"
     class="group-edit-handler">
   </div>
 }

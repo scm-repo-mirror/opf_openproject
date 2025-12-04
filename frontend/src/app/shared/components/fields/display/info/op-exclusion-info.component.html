@@ -3,13 +3,15 @@
   (closed)="opened = false"
   class="op-exclusion-info"
 >
-  <svg
-    slot="trigger"
-    info-icon
-    class="button--icon op-exclusion-info--icon"
-    size="small"
-    (click)="toggleOpen($event)"
-  ></svg>
+<span
+  tabindex="0"
+  class="op-exclusion-info--icon"
+  (click)="toggleOpen($event)"
+  (keydown.enter)="toggleOpen($event)"
+  (keydown.space)="toggleOpen($event)"
+>
+  <svg info-icon size="small" aria-hidden="true"></svg>
+</span>
 
   <ng-container slot="body" class="op-exclusion-info--modal">
     <div class="op-exclusion-info--modal">

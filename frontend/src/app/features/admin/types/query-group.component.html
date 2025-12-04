@@ -4,10 +4,19 @@
         <op-group-edit-in-place [name]="group.name"
                 (onValueChange)="rename($event)"
                 class="group-name" />
-        <span class="delete-group icon-small icon-close" (click)="deleteGroup.emit()"></span>
+        <span class="delete-group icon-small icon-close"
+              (click)="deleteGroup.emit()"
+              (keydown.enter)="deleteGroup.emit()"
+              (keydown.space)="deleteGroup.emit()"
+              tabindex="0">
+        </span>
     </div>
     <div class="type-form-query">
-        <span class="type-form-query-group--edit-button" (click)="editQuery.emit()">
+        <span class="type-form-query-group--edit-button"
+              (click)="editQuery.emit()"
+              (keydown.enter)="editQuery.emit()"
+              (keydown.space)="editQuery.emit()"
+              tabindex="0">
           <op-icon icon-classes="button--icon icon-edit" />
             {{ text.edit_query }}
         </span>

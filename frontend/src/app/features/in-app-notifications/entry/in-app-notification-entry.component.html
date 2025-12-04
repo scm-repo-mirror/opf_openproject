@@ -1,6 +1,9 @@
 <div
   class="op-ian-item--row"
+  tabindex="0"
   (click)="onClick()"
+  (keydown.enter)="onClick()"
+  (keydown.space)="onClick()"
   (dblclick)="onDoubleClick()"
   >
   @if (workPackage$ && (workPackage$ | async); as workPackage) {
@@ -53,6 +56,8 @@
         class="op-ian-item--button icon-mark-read"
         [title]="text.mark_as_read"
         (click)="markAsRead($event, aggregatedNotifications)"
+        (keydown.enter)="markAsRead($event, aggregatedNotifications)"
+        (keydown.space)="markAsRead($event, aggregatedNotifications)"
         tabindex="0"
         >
       </i>

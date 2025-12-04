@@ -19,7 +19,10 @@
       <a
         uiSref="work-packages.show"
         [uiParams]="{ workPackageId: active.entity.id }"
+        tabindex="0"
         (click)="closeMe()"
+        (keydown.enter)="closeMe()"
+        (keydown.space)="closeMe()"
       >
         #{{ active.workPackage.id }}: {{ active.workPackage.name }}
       </a>

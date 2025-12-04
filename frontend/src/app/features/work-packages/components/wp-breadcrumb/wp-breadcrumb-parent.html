@@ -3,6 +3,9 @@
     <a
       [attr.title]="parent.name"
       (click)="switchToFullscreenForWp(parent)"
+      (keydown.enter)="switchToFullscreenForWp(parent)"
+      (keydown.space)="switchToFullscreenForWp(parent)"
+      tabindex="0"
       class="op-wp-breadcrumb-parent nocut"
       data-test-selector="op-wp-breadcrumb-parent">
       <span [textContent]="parent.name"></span>

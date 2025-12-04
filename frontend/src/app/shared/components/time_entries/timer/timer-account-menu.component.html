@@ -3,7 +3,10 @@
     <a
       class="op-timer-account-menu--timer-icon"
       data-test-selector="op-timer-account-menu-stop"
+      tabindex="0"
       (click)="stopTimer()"
+      (keydown.space)="stopTimer()"
+      (keydown.enter)="stopTimer()"
       >
       <svg op-stopwatch-stop-icon size="small" />
       <span>{{text.stop}}</span>

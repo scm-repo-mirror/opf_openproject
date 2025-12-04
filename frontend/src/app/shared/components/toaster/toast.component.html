@@ -16,7 +16,10 @@
         <span [textContent]="' '"></span>
         @if (toast.link) {
           <a class="op-toast--target-link"
+             tabindex="0"
             (click)="executeTarget()"
+            (keydown.enter)="executeTarget()"
+            (keydown.space)="executeTarget()"
             [textContent]="toast.link!.text">
           </a>
         }
@@ -28,10 +31,18 @@
           <div>
             @if (canBeHidden) {
               <div>
-                <a (click)="show = true" [hidden]="show">
+                <a tabindex="0"
+                  (click)="show = true"
+                   (keydown.space)="show = true"
+                   (keydown.enter)="show = true"
+                   [hidden]="show">
                   <svg chevron-right-icon size="small"></svg>
                 </a>
-                <a (click)="show = false" [hidden]="!show">
+                <a tabindex="0"
+                  (click)="show = false"
+                  (keydown.enter)="show = false"
+                  (keydown.space)="show = false"
+                  [hidden]="!show">
 
                   <svg chevron-down-icon size="small"></svg>
                 </a>

@@ -132,7 +132,7 @@
     }
 
     <div class="op-team-planner--footer" data-test-selector="op-team-planner-footer">
-      @if (!(showAddAssignee$ | async) && !(dropzone$ | async)?.dragging) {
+      @if ((showAddAssignee$ | async) === false && ((dropzone$ | async)?.dragging) === false) {
         <div
           class="op-team-planner--add-assignee"
           >

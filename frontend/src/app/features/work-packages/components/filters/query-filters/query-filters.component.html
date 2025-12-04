@@ -5,7 +5,10 @@
       <a
         [attr.title]="text.close_form"
         class="advanced-filters--close icon-context icon-close"
-        (click)="closeFilter()">
+        (click)="closeFilter()"
+        (keydown.enter)="closeFilter()"
+        (keydown.space)="closeFilter()"
+        tabindex="0">
       </a>
     }
     <ul class="advanced-filters--filters">

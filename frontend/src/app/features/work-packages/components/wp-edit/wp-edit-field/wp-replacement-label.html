@@ -1,6 +1,8 @@
 <span
   class="wp-replacement-label"
   (click)="activate($event)"
+  (keydown.space)="activate($event)"
+  (keydown.enter)="activate($event)"
   tabindex="-1"
   attr.data-test-selector="{{fieldName}}">
   <ng-content />
