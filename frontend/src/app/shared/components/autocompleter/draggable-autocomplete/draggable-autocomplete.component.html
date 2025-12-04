@@ -42,13 +42,13 @@
               [textContent]="item.name"
             ></span>
             @if (isRemovable(item)) {
-              <span
+              <div
                 tabindex="0"
                 (click)="remove(item)"
                 (keydown.enter)="remove(item)"
                 (keydown.space)="remove(item)"
                 class="op-draggable-autocomplete--remove-item icon-remove"
-              ></span>
+              ></div>
             }
           </div>
         }
