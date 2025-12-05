@@ -5,6 +5,7 @@
                 (onValueChange)="rename($event)"
                 class="group-name" />
         <span class="delete-group icon-small icon-close"
+              role="button"
               (click)="deleteGroup.emit()"
               (keydown.enter)="deleteGroup.emit()"
               (keydown.space)="deleteGroup.emit()"
@@ -13,6 +14,7 @@
     </div>
     <div class="type-form-query">
         <span class="type-form-query-group--edit-button"
+              role="button"
               (click)="editQuery.emit()"
               (keydown.enter)="editQuery.emit()"
               (keydown.space)="editQuery.emit()"

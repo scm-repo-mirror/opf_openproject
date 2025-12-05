@@ -41,6 +41,7 @@
       }
       @if (board.editable) {
         <div class="boards-list--add-item -no-text-select"
+          role="button"
           (click)="addList(board)"
           (keydown.enter)="addList(board)"
           (keydown.space)="addList(board)"
