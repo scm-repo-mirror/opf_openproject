@@ -17,6 +17,7 @@
         @if (toast.link) {
           <a class="op-toast--target-link"
              tabindex="0"
+             href="#"
             (click)="executeTarget()"
             (keydown.enter)="executeTarget()"
             (keydown.space)="executeTarget()"
@@ -31,14 +32,17 @@
           <div>
             @if (canBeHidden) {
               <div>
-                <a tabindex="0"
+                <a href="#"
+                   tabindex="0"
                   (click)="show = true"
                    (keydown.space)="show = true"
                    (keydown.enter)="show = true"
                    [hidden]="show">
                   <svg chevron-right-icon size="small"></svg>
                 </a>
-                <a tabindex="0"
+                <a
+                  href="#"
+                  tabindex="0"
                   (click)="show = false"
                   (keydown.enter)="show = false"
                   (keydown.space)="show = false"
